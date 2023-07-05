@@ -16,6 +16,8 @@ const getFilteredCountries = (value) => {
         .join("")}</ul>`;
       document.getElementById("results").innerHTML = output;
     });
+  } else {
+    document.getElementById("results").innerHTML = "";
   }
 };
 
