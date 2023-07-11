@@ -27,3 +27,21 @@ document
   .addEventListener("input", function (event) {
     debouncedGetCountries(event.target.value);
   });
+
+const listElement = document.getElementById("results");
+
+document
+  .getElementById("searchCountries")
+  .addEventListener("focus", function () {
+    listElement.classList.add("show");
+  });
+
+document.body.addEventListener("click", function () {
+  listElement.classList.remove("show");
+});
+
+document
+  .getElementById("searchContainer")
+  .addEventListener("click", function (e) {
+    e.stopPropagation();
+  });
